@@ -56,8 +56,8 @@ public class loginSevelet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        String user_name = request.getParameter("name");
-        String password = request.getParameter("password");
+        String user_name = request.getParameter("Username");
+        String password = request.getParameter("Password");
         loginDBcontext db = new loginDBcontext();
         user account = db.getAccountByUsernamePassword(user_name, password);
         if(account != null)
