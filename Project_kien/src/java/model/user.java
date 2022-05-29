@@ -20,11 +20,13 @@ public class user {
     private String address;
     private String email;
     private String campus;
+    private String user_name;
+    private String pasword;
 
     public user() {
     }
 
-    public user(String id, String sur_name, String middle_name, String give_name, String dob, String phone, String sex, String id_card, String address, String email, String campus) {
+    public user(String id, String sur_name, String middle_name, String give_name, String dob, String phone, String sex, String id_card, String address, String email, String campus, String user_name, String pasword) {
         this.id = id;
         this.sur_name = sur_name;
         this.middle_name = middle_name;
@@ -36,7 +38,27 @@ public class user {
         this.address = address;
         this.email = email;
         this.campus = campus;
+        this.user_name = user_name;
+        this.pasword = pasword;
     }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
+
+    public String getPasword() {
+        return pasword;
+    }
+
+    public void setPasword(String pasword) {
+        this.pasword = pasword;
+    }
+
+   
 
     public String getId() {
         return id;
