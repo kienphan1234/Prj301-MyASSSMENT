@@ -26,7 +26,10 @@ public class user {
     public user() {
     }
 
-    public user(String id, String sur_name, String middle_name, String give_name, String dob, String phone, String sex, String id_card, String address, String email, String campus, String user_name, String pasword) {
+
+
+    public user(String id, String sur_name, String middle_name, String give_name, String dob, String phone, String sex, String id_card, String address, String email, String campus) {
+
         this.id = id;
         this.sur_name = sur_name;
         this.middle_name = middle_name;
@@ -58,8 +61,7 @@ public class user {
         this.pasword = pasword;
     }
 
-   
-
+  
     public String getId() {
         return id;
     }

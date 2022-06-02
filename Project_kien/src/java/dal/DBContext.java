@@ -11,10 +11,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Ngo Tung Son
- */
 public abstract class DBContext<T> {
     protected Connection connection;
     public DBContext()
