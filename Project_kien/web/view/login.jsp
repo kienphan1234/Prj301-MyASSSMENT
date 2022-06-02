@@ -37,6 +37,6 @@
                 <input type="submit" class="btn" value="Sign In">
             </div>
         </form>
-        <img  src="./img/Ảnh-6.jpg" class="anh_fpt">
+       
     </body>
 </html>
