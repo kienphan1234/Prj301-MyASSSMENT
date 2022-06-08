@@ -67,6 +67,8 @@ public class loginSevelet extends HttpServlet {
         else
         {
             response.getWriter().println("login failed!");
+             response.getWriter().println("Incorrect username or password");
+            response.getWriter().println("please return to the page /login");
         }
     
     }
