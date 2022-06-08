@@ -62,7 +62,7 @@ public class loginSevelet extends HttpServlet {
         user account = db.getAccountByUsernamePassword(user_name, password);
         if(account != null)
         {
-            response.getWriter().println("hello ");
+            request.getRequestDispatcher("view/display.jsp").forward(request, response);
         }
         else
         {
