@@ -29,17 +29,6 @@ public class loginDBcontext extends DBContext<user>{
             {
                 user r = new user();
                 r.setUser_name(rs.getString("user_name"));
-                r.setId(rs.getString("id"));
-                r.setSur_name(rs.getString("sur_name"));
-                r.setMiddle_name(rs.getString("middle_name"));
-                r.setGive_name(rs.getString("given_name"));
-                r.setDob(rs.getString("dob"));
-                r.setPhone(rs.getString("phone"));
-                r.setSex(rs.getString("sex"));
-                r.setId_card(rs.getString("id_card"));
-                r.setAddress(rs.getString("address"));
-                r.setEmail(rs.getString("email"));
-                r.setCampus(rs.getString("campus"));
                 
                 return r;
             }
