@@ -27,7 +27,6 @@
   
      
 </nav>
-        kien:  ${requestScope.user.user_name}
 
 
 </body>
