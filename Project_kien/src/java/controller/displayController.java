@@ -5,20 +5,18 @@
 
 package controller;
 
-import dal.loginDBcontext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.user;
 
 /**
  *
  * @author ADMIN
  */
-public class loginSevelet extends HttpServlet {
+public class displayController extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -29,7 +27,19 @@ public class loginSevelet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.getRequestDispatcher("view/login.jsp").forward(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet displayController</title>");  
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet displayController at " + request.getContextPath () + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -43,7 +53,7 @@ public class loginSevelet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        processRequest(request, response);
+        request.getRequestDispatcher("view/display.jsp").forward(request, response);
     } 
 
     /** 
@@ -56,21 +66,7 @@ public class loginSevelet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        String user_name = request.getParameter("Username");
-        String password = request.getParameter("Password");
-        loginDBcontext db = new loginDBcontext();
-        user account = db.getAccountByUsernamePassword(user_name, password);
-        if(account != null)
-        {
-            request.getRequestDispatcher("view/menu.jsp").forward(request, response);
-        }
-        else
-        {
-            response.getWriter().println("login failed!");
-             response.getWriter().println("Incorrect username or password");
-            response.getWriter().println("please return to the page /login");
-        }
-    
+        processRequest(request, response);
     }
 
     /** 
