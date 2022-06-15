@@ -56,10 +56,10 @@ public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        userDBContext dbuser = new userDBContext();
+       userDBContext dbuser = new userDBContext();
        ArrayList<user> user = dbuser.list();
        request.setAttribute("user", user);
-        request.getRequestDispatcher("view/Home.jsp").forward(request, response);
+       request.getRequestDispatcher("view/Home.jsp").forward(request, response);
     } 
 
     /** 

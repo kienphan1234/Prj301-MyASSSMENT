@@ -12,6 +12,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.jsp.PageContext;
 import model.user;
 
 /**
@@ -62,6 +63,7 @@ public class loginSevelet extends HttpServlet {
         user account = db.getAccountByUsernamePassword(user_name, password);
         if(account != null)
         {
+            request.getSession().setAttribute("account", account);
             request.getRequestDispatcher("view/menu.jsp").forward(request, response);
         }
         else

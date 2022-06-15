@@ -20,8 +20,9 @@
 </div>
  <nav>
    <ul>
-    <li><a class="active" href="home">Home</a></li>
-    <li>><a href="login">Sign out</a></li>
+       <li><a class="active" href="home">Home</a></li>
+       <h5>Account: ${sessionScope.account.user_name}</h5>
+    <li><a href="login">Sign out</a></li>
    </ul>
   
 </nav>
