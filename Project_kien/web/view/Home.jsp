@@ -21,15 +21,12 @@
  <nav>
    <ul>
     <li><a class="active" href="home">Home</a></li>
-   
     <li>><a href="login">Sign out</a></li>
    </ul>
   
-     
 </nav>
 
 
-</body>
 <div>      
   <h3>Information Access(Tra cứu thông tin)</h3>
   </div>

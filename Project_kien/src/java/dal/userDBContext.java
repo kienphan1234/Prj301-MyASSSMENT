@@ -28,7 +28,8 @@ public class userDBContext extends DBContext<user> {
             PreparedStatement stm = connection.prepareStatement(sql);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
-                user r = new user();             
+                user r = new user();  
+                r.setUser_name(rs.getString("user_name"));
                 users.add(r);
             }
         } catch (SQLException ex) {
