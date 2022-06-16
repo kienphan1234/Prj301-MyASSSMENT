@@ -19,6 +19,23 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <a class="container-fluid" href="home">Home</a>  
+        <a href="login">Sign out</a>
+        <br/>
+        <div class="container">
+        <div class="small" >
+ Activities for ${sessionScope.account.user_name} <br/>
+
+Chú thích: Các hoạt động trong bảng dưới không bao gồm hoạt động ngoại khóa, ví dụ như hoạt động câu lạc bộ ...<br/>
+
+Các phòng bắt đầu bằng AL thuộc tòa nhà Alpha. VD: AL...<br/>
+Các phòng bắt đầu bằng BE thuộc tòa nhà Beta. VD: BE,..<br/>
+Các phòng bắt đầu bằng G thuộc tòa nhà Gamma. VD: G201,...<br/>
+Các phòng tập bằng đầu bằng R thuộc khu vực sân tập Vovinam.<br/>
+Các phòng bắt đầu bằng DE thuộc tòa nhà Delta. VD: DE,..<br/>
+Little UK (LUK) thuộc tầng 5 tòa nhà Delta
+        </div>
+ </div>
         <div class="container">
             <table  class="table table-bordered" >
                 <tr  class="table-primary">
@@ -49,6 +66,12 @@
                     <td>Slot 1</td>
                     <c:forEach items="${listTable}" var="c">
                         <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td></td>
+                        <td></td>
                     </c:forEach>
 
 
@@ -56,21 +79,32 @@
                 <tr>
                     <td>Slot 2</td>
                     <c:forEach items="${listTable}" var="c">
-                        <td>${c.name}  in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td></td>
+                        <td></td>
                     </c:forEach>
                 </tr>
                 <tr>
                     <td>Slot 3</td>
                     <c:forEach items="${listTable}" var="c">
-                        <td>${c.name} in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td class="text-primary">${c.name} <br/> in ${c.room}</td>
+                        <td></td>
+                        <td></td>
                     </c:forEach>
                 </tr>
                 <tr>
                     <td>Slot 4</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

@@ -16,6 +16,10 @@
         <servlet-name>MarkController</servlet-name>
         <servlet-class>controller.MarkController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>attendanceController</servlet-name>
+        <servlet-class>controller.attendanceController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginSevelet</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>MarkController</servlet-name>
         <url-pattern>/Markview</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>attendanceController</servlet-name>
+        <url-pattern>/attendanceview</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
