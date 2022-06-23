@@ -16,10 +16,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-
+        <form action="takeAttendance" method="POST">
+        
         <div class="container mt-3">
-            <h2>Attendance</h2>
-            <p>Class SE1627</p>            
+            <h2>Take Attendance</h2>
+            <p><select name="">
+                    <option>Class SE1610</option>
+                    <option>Class SE1608</option>
+                </select></p>            
             <table class="table">
                 <thead>
                     <tr>
@@ -42,7 +46,7 @@
                             <td>HE</td>
                             <td>SAO</td>
                             <td><img src="https://image.shutterstock.com/image-vector/default-avatar-profile-icon-grey-260nw-518740747.jpg"></td>
-                            <td><input type="radio" name="status"><p>Attended</p>|<input type="radio" name="status"><p>Absent</p></td>
+                            <td><input type="radio" name="status">Attended|<input type="radio" name="status">Absent</td>
                             <td>Name</td>
                             <td>12/12/2021</td>
                             
@@ -55,6 +59,12 @@
                 </tbody>
             </table>
         </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-outline-success" value="ADD" /><br/>
+            <p></p><br/>
+            <p></p>
+        </div>
+        </form>
 
     </body>
 </html>
