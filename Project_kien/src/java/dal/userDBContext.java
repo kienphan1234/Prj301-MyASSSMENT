@@ -29,7 +29,7 @@ public class userDBContext extends DBContext<user> {
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
                 user r = new user();  
-                r.setUser_name(rs.getString("user_name"));
+                r.setUser_name(rs.getString("username"));
                 users.add(r);
             }
         } catch (SQLException ex) {

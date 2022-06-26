@@ -34,7 +34,10 @@
   <div>               
           <a href="timetable">Weekly timetable(Thời khóa biểu từng tuần)</a><br>
           <a href="attendanceview">Attendance report(Báo cáo điểm danh)</a><br>
-          <a href="takeAttendance">Attendance(Điểm danh)</a><br>
+          <c:if test="${sessionScope.account.role == 1}">
+              <a href="takeAttendance">Attendance(Điểm danh)</a><br>
+          </c:if>
+          
           <a href="Markview">Mark Report (Báo cáo điểm)</a>
                 
 </div>

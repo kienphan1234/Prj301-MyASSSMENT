@@ -20,7 +20,7 @@ public class loginDBcontext extends DBContext<user>{
     public user getAccountByUsernamePassword(String user_name, String password) {
         try {
             String sql = "SELECT* FROM [dbo].[user]\n"
-                    + "WHERE user_name = ? AND password = ?";
+                    + "WHERE username = ? AND pass = ?";
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setString(1, user_name);
             stm.setString(2, password);
@@ -28,8 +28,8 @@ public class loginDBcontext extends DBContext<user>{
             if(rs.next())
             {
                 user r = new user();
-                r.setUser_name(rs.getString("user_name"));
-                
+                r.setUser_name(rs.getString("username"));
+                r.setRole(rs.getInt("role"));
                 return r;
             }
         } catch (SQLException ex) {
