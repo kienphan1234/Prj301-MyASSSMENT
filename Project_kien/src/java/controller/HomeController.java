@@ -5,7 +5,7 @@
 
 package controller;
 
-import dal.userDBContext;
+import dal.AttendanceDB;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -56,7 +56,7 @@ public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-       userDBContext dbuser = new userDBContext();
+       AttendanceDB dbuser = new AttendanceDB();
        ArrayList<user> user = dbuser.list();
        request.setAttribute("user", user);
        request.getRequestDispatcher("view/Home.jsp").forward(request, response);

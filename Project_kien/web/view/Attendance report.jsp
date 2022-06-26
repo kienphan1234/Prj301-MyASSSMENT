@@ -169,3 +169,12 @@
  
     </body>
 </html>
+</c:forEach>
+                        <c:forEach items="${list}" var="c">
+                        <c:if test="${c.status == 1}">
+                        <h1>Present</h1>
+                        </c:if>
+                        <c:if test="${c.status != 1}">
+                        <h1>Absent</h1>
+                        </c:if>
+                    </c:forEach>

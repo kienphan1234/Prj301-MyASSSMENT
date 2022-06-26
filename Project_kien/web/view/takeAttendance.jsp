@@ -4,7 +4,8 @@
     Author     : ADMIN
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,18 +17,41 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-        <form action="takeAttendance" method="POST">
-        
+
+
         <div class="container mt-3">
             <h2>Take Attendance</h2>
-            <p><select name="">
-                    <option>Class SE1610</option>
-                    <option>Class SE1608</option>
-                </select></p>            
+            <p>
+            <form action="takeAttendance" method="get">
+                <select name="class">
+                    <c:forEach items="${listClass}" var="c">
+
+                        <option value="${c}">${c}</option>
+
+
+
+
+
+
+                    </c:forEach>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+
+
+
+
+
+
+
+        </p>  
+        <form action="update" method="post">
+
+            <input type="hidden" name="className" value="${className}">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>No</th>
+
                         <th>Group</th>
                         <th>Code</th>
                         <th>Name</th>
@@ -39,32 +63,35 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <c:forEach begin="1" end="5">
-                        <tr>
-                            <td>1</td>
-                            <td>IOT102</td>
-                            <td>HE</td>
-                            <td>SAO</td>
-                            <td><img src="https://image.shutterstock.com/image-vector/default-avatar-profile-icon-grey-260nw-518740747.jpg"></td>
-                            <td><input type="radio" name="status">Attended|<input type="radio" name="status">Absent</td>
-                            <td>Name</td>
-                            <td>12/12/2021</td>
-                            
 
+                    <c:forEach items="${listAttend}" var="c">
+                        <tr>
+
+                            <td>${c.code}</td>
+                            <td>${c.group}</td>
+                            <td>${c.name}</td>
+                            <td><img src="https://image.shutterstock.com/image-vector/default-avatar-profile-icon-grey-260nw-518740747.jpg"></td>
+                            <td>
+
+                                <input type="radio" name="${c.code}" value="1" ${c.status == 1 ? "checked":""}>Attended|<input type="radio" name="${c.code}" value="0"  ${c.status == 0 ? "checked":""}>Absent</td>
+
+                            </td>
+                            <td>${sessionScope.account.user_name}</td>
+                            <td>${c.date}</td>
+
+</c:forEach>
 
                         </tr>
-                    </c:forEach>
-
-
                 </tbody>
+
             </table>
-        </div>
-        <div class="text-center">
-            <input type="submit" class="btn btn-outline-success" value="ADD" /><br/>
-            <p></p><br/>
-            <p></p>
-        </div>
+            <div class="text-center">
+                <input type="submit" class="btn btn-outline-success" value="ADD" /><br/>
+                <p></p><br/>
+                <p></p>
+            </div>
         </form>
 
-    </body>
+    </div>
+</body>
 </html>

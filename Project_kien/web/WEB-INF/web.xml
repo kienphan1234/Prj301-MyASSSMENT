@@ -21,6 +21,10 @@
         <servlet-class>controller.attendanceController</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>update</servlet-name>
+        <servlet-class>controller.update</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>takeAttendance</servlet-name>
         <servlet-class>controller.takeAttendance</servlet-class>
     </servlet>
@@ -43,6 +47,10 @@
     <servlet-mapping>
         <servlet-name>attendanceController</servlet-name>
         <url-pattern>/attendanceview</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>update</servlet-name>
+        <url-pattern>/update</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>takeAttendance</servlet-name>
