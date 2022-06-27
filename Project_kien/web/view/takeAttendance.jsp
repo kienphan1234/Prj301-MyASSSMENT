@@ -28,11 +28,6 @@
 
                         <option value="${c}">${c}</option>
 
-
-
-
-
-
                     </c:forEach>
                 </select>
                 <button type="submit">Submit</button>
@@ -67,10 +62,10 @@
                     <c:forEach items="${listAttend}" var="c">
                         <tr>
 
-                            <td>${c.code}</td>
                             <td>${c.group}</td>
+                            <td>${c.code}</td>
                             <td>${c.name}</td>
-                            <td><img src="https://image.shutterstock.com/image-vector/default-avatar-profile-icon-grey-260nw-518740747.jpg"></td>
+                            <td><img src="https://scr.vn/wp-content/uploads/2020/07/Avatar-Facebook-tr%E1%BA%AFng.jpg" style="width:100px;height:100px;"></td>
                             <td>
 
                                 <input type="radio" name="${c.code}" value="1" ${c.status == 1 ? "checked":""}>Attended|<input type="radio" name="${c.code}" value="0"  ${c.status == 0 ? "checked":""}>Absent</td>

@@ -9,6 +9,7 @@ package model;
  * @author ADMIN
  */
 public class Attendance {
+    private int id;
     private String code;
     private String group;
     private String name ;
@@ -16,6 +17,26 @@ public class Attendance {
     private String date ;
     private int status;
     private String teacher;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Attendance(int id, String code, String group, String name, String className, String date, int status, String teacher) {
+        this.id = id;
+        this.code = code;
+        this.group = group;
+        this.name = name;
+        this.className = className;
+        this.date = date;
+        this.status = status;
+        this.teacher = teacher;
+    }
+    
 
     public String getTeacher() {
         return teacher;

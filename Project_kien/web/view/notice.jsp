@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Succesfully</h1>
+        Take Attendance
+        <h1 style="background-color:MediumSeaGreen;">Succesfully</h1>
     </body>
 </html>
