@@ -25,12 +25,14 @@
             <form action="takeAttendance" method="get">
                 <select name="class">
                     <c:forEach items="${listClass}" var="c">
-
-                        <option value="${c}">${c}</option>
+                  <option 
+                      
+                        value="${c}">${c}</option>
+                        
 
                     </c:forEach>
                 </select>
-                <button type="submit">Submit</button>
+                <button type="submit">list Student</button>
             </form>
 
 
@@ -47,7 +49,7 @@
                 <thead>
                     <tr>
 
-                        <th>Group</th>
+                        <th>Course</th>
                         <th>Code</th>
                         <th>Name</th>
                         <th>Image</th>

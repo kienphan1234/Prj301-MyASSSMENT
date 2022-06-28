@@ -15,31 +15,67 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div class="alert alert-success text-center">
-            <h1>FPT University Academic Portal</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a class="active" href="home">Home</a></li>
-                <h5>Account: ${sessionScope.account.user_name}</h5>
-                <li><a href="login">Sign out</a></li>
-            </ul>
+    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB2pEAwzcQnc8QDtlwY3ugwg9Gzpfwkf11vAuOya_MgxdedWempaAssClcRmvEgjtmWPE&usqp=CAU" style="width:200px;height:200px;"></td>
 
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(255, 102, 0)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">introduce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">majors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login">Sign out</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <h5>Account: ${sessionScope.account.user_name}</h5>
+                </form>
+            </div>
+        </div>
+    </nav>      
+
+    <div> 
+        <nav class="navbar navbar-light" style="background-color: rgb(153, 255, 153)">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Information Access(Tra cứu thông tin)</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="timetable">Weekly timetable(Thời khóa biểu từng tuần)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="attendanceview">Attendance report(Báo cáo điểm danh)</a>
+                        </li>
+                        <c:if test="${sessionScope.account.role == 1}">
+                            <li class="nav-item">
+                                <a class="nav-link" href="takeAttendance">Attendance(Điểm danh)</a>
+                            </li>
+                        </c:if>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Markview">Mark Report (Báo cáo điểm)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
 
-        <div>      
-            <h3>Information Access(Tra cứu thông tin)</h3>
-        </div>
-        <div>               
-            <a href="timetable">Weekly timetable(Thời khóa biểu từng tuần)</a><br>
-            <a href="attendanceview">Attendance report(Báo cáo điểm danh)</a><br>
-            <c:if test="${sessionScope.account.role == 1}">
-                <a href="takeAttendance">Attendance(Điểm danh)</a><br>
-            </c:if>
+    </div>
+    <div class="container mt-3">
+        <p class="text-nowrap">© 2022 Bản quyền thuộc về Trường Đại học FPT.</p>
+    </div>
 
-            <a href="Markview">Mark Report (Báo cáo điểm)</a>
 
-        </div>
-    </body>
+</body>
 </html>
