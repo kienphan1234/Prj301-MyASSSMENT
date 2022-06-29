@@ -32,6 +32,10 @@
         <servlet-name>viewattendence</servlet-name>
         <servlet-class>controller.viewattendence</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addmarkcontroller</servlet-name>
+        <servlet-class>controller.addmarkcontroller</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginSevelet</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>viewattendence</servlet-name>
         <url-pattern>/viewattendence</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addmarkcontroller</servlet-name>
+        <url-pattern>/addmark</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

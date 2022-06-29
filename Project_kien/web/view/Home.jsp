@@ -58,6 +58,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="attendanceview">Attendance report(Báo cáo điểm danh)</a>
                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="Markview">Mark Report (Báo cáo điểm)</a>
+                        </li>
                         </c:if>
                         <c:if test="${sessionScope.account.role == 1}">
                             <li class="nav-item">
@@ -66,10 +69,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="viewattendence">view Attendance( Xem Điểm danh)</a>
                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="addmark">Add Mark(Nhập Điểm)</a>
+                            </li>
                         </c:if>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Markview">Mark Report (Báo cáo điểm)</a>
-                        </li>
+                       
                     </ul>
                 </div>
             </div>
