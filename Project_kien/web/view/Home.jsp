@@ -54,12 +54,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="timetable">Weekly timetable(Thời khóa biểu từng tuần)</a>
                         </li>
+                        <c:if test="${sessionScope.account.role == 0}">
                         <li class="nav-item">
                             <a class="nav-link" href="attendanceview">Attendance report(Báo cáo điểm danh)</a>
                         </li>
+                        </c:if>
                         <c:if test="${sessionScope.account.role == 1}">
                             <li class="nav-item">
                                 <a class="nav-link" href="takeAttendance">Attendance(Điểm danh)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="viewattendence">view Attendance( Xem Điểm danh)</a>
                             </li>
                         </c:if>
                         <li class="nav-item">

@@ -13,6 +13,7 @@
     </head>
     <body>
         Take Attendance
+        <a href="home">Home</a>
         <h1 style="background-color:MediumSeaGreen;">Succesfully</h1>
     </body>
 </html>

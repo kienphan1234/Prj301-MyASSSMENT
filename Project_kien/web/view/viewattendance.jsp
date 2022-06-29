@@ -1,6 +1,6 @@
 <%-- 
-    Document   : takeAttendance
-    Created on : Jun 21, 2022, 9:50:03 PM
+    Document   : viewattendance
+    Created on : Jun 29, 2022, 8:17:29 AM
     Author     : ADMIN
 --%>
 
@@ -20,16 +20,16 @@
 
 
         <div class="container mt-3">
-            <div class="alert alert-success">Take Attendance <a href="home">Home</a></div>
-            
+            <div class="alert alert-success">View Attendance <a href="home">Home</a></div>
+
             <p>
-            <form action="takeAttendance" method="get">
+            <form action="viewattendence" method="get">
                 <select name="class">
                     <c:forEach items="${listClass}" var="c">
-                  <option 
-                      
-                        value="${c}" ${param['class']==c?'selected':''}>${c}</option>
-                        
+                        <option 
+
+                            value="${c}" ${param['class']==c?'selected':''}>${c}</option>
+
 
                     </c:forEach>
                 </select>
@@ -43,7 +43,7 @@
 
 
         </p>  
-        <form action="update" method="post">
+        <form action="viewattendence" method="post">
 
             <input type="hidden" name="className" value="${className}">
             <table class="table">
@@ -70,26 +70,25 @@
                             <td>${c.name}</td>
                             <td><img src="https://scr.vn/wp-content/uploads/2020/07/Avatar-Facebook-tr%E1%BA%AFng.jpg" style="width:100px;height:100px;"></td>
                             <td>
-
-                                <input type="radio" name="${c.code}" value="1" ${c.status == 1 ? "checked":""}>Attended|<input type="radio" name="${c.code}" value="0"  ${c.status == 0 ? "checked":""}>Absent</td>
-
+                                <c:if test="${c.status == 1}">
+                                    <p style="color:rgb(0, 153, 51)">Present</p>
+                                </c:if>
+                                <c:if test="${c.status != 1}">
+                                    <p class="text-danger">Absent</p>
+                                </c:if>
                             </td>
                             <td>${sessionScope.account.user_name}</td>
                             <td>${c.date}</td>
 
-</c:forEach>
+                        </c:forEach>
 
-                        </tr>
+                    </tr>
                 </tbody>
 
             </table>
-            <div class="text-center">
-                <input type="submit" class="btn btn-outline-success" value="ADD" /><br/>
-                <p></p><br/>
-                <p></p>
-            </div>
         </form>
 
     </div>
 </body>
 </html>
+
