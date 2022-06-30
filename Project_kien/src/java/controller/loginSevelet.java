@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.jsp.PageContext;
-import model.user;
+import model.User;
 
 /**
  *
@@ -60,10 +60,12 @@ public class loginSevelet extends HttpServlet {
         String user_name = request.getParameter("Username");
         String password = request.getParameter("Password");
         loginDBcontext db = new loginDBcontext();
-        user account = db.getAccountByUsernamePassword(user_name, password);
+        User account = db.getAccountByUsernamePassword(user_name, password);
         if(account != null)
         {
             request.getSession().setAttribute("account", account);
+            request.getSession().setAttribute("username", user_name);
+            request.getSession().setAttribute("password", password);
             request.getRequestDispatcher("view/menu.jsp").forward(request, response);
         }
         else

@@ -18,12 +18,15 @@ import model.Attendance;
  */
 public class AttendanceReportDBContext extends DBContext<Attendance> {
 
-    public ArrayList<Attendance> listattendancereport() {
+    public ArrayList<Attendance> listattendancereport(String group,String code) {
         ArrayList<Attendance> Attendancers = new ArrayList<>();
         try {
-            String sql = "select id,date, teacher, name_class, status from  [dbo].[attendance]" ;
+            String sql = "select id,date, teacher, name_class, status from  [dbo].[attendance] where [group] like ? and code like ? " ;
             PreparedStatement stm = connection.prepareStatement(sql);
+            stm.setString(1, group);
+            stm.setString(2, code);
             ResultSet rs = stm.executeQuery();
+            
             while (rs.next()) {
                 Attendance a = new Attendance();
                 a.setId(rs.getInt("id"));

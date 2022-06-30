@@ -7,6 +7,7 @@ package controller;
 
 import dal.AttendanceDB;
 import dal.AttendanceReportDBContext;
+import dal.loginDBcontext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -15,6 +16,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import model.Attendance;
+import model.User;
 
 /**
  *
@@ -32,7 +34,14 @@ public class attendanceController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        ArrayList<Attendance> listAttends = new AttendanceReportDBContext().listattendancereport();
+        //request.getParame
+        //User user = (User)request.getSession().getAttribute("account");
+        String user_name = (String)request.getSession().getAttribute("username");
+         String password =(String) request.getSession().getAttribute("password");
+        
+        String code = new loginDBcontext().getCode(user_name, password);
+        String className = request.getParameter("class");
+        ArrayList<Attendance> listAttends = new AttendanceReportDBContext().listattendancereport(className,code);
         request.setAttribute("listAttends", listAttends);
        request.getRequestDispatcher("view/Attendance report.jsp").forward(request, response);
     } 

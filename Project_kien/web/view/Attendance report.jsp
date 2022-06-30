@@ -68,13 +68,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <p> <a href="#">Basic Cross-Platform Application Programming With .NET(PRN211)  </a></p>
+                            <p> <a href="attendanceview?class=PRN211">Basic Cross-Platform Application Programming With .NET(PRN211)  </a></p>
                         </td>
                     </tr>
                     <tr>
                         <td>
                            
-                            <p> <a href="#" class="text-success">Java Web Application Development (PRJ301)   </a></p>
+                            <p> <a href="attendanceview?class=PRJ301" class="text-success">Java Web Application Development (PRJ301)   </a></p>
                         </td>
                     </tr>
                     <tr>

@@ -14,25 +14,25 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Attendance;
-import model.user;
+import model.User;
 import org.apache.tomcat.util.net.SSLHostConfigCertificate;
 
 /**
  *
  * @author ADMIN
  */
-public class AttendanceDB extends DBContext<user> {
+public class AttendanceDB extends DBContext<User> {
 
     @Override
-    public ArrayList<user> list() {
-        ArrayList<user> users = new ArrayList<>();
+    public ArrayList<User> list() {
+        ArrayList<User> users = new ArrayList<>();
         String sql = "select*\n"
                 + "from [dbo].[user]";
         try {
             PreparedStatement stm = connection.prepareStatement(sql);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
-                user r = new user();
+                User r = new User();
                 r.setUser_name(rs.getString("username"));
                 users.add(r);
             }
@@ -143,30 +143,30 @@ public class AttendanceDB extends DBContext<user> {
 
     public static void main(String[] args) {
         AttendanceDB dao = new AttendanceDB();
-        ArrayList<user> list = dao.list();
+        ArrayList<User> list = dao.list();
 
-        for (user object : list) {
+        for (User object : list) {
             System.out.println(object.toString());
         }
     }
 
     @Override
-    public user get(int id) {
+    public User get(int id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void insert(user model) {
+    public void insert(User model) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void update(user model) {
+    public void update(User model) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void delete(user model) {
+    public void delete(User model) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

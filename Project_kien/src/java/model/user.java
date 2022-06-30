@@ -8,10 +8,11 @@ package model;
  *
  * @author ADMIN
  */
-public class user {
+public class User {
    private String user_name;
    private String password;
    private int role;
+   private String code ;
 
     public int getRole() {
         return role;
@@ -36,5 +37,14 @@ public class user {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+    
    
 }
