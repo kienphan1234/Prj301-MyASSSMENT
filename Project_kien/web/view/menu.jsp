@@ -18,17 +18,20 @@
     <div >
         <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(255, 102, 0)">
             <div class="container-fluid">
-                <a class="navbar-brand" href="home">Home</a>
+                <a class="navbar-brand" href="menu">Menu</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">introduce</a>
+                            <a class="nav-link" href="home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">majors</a>
+                            <a class="nav-link" href="#">Introduce</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Majors</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="login">Sign out</a>

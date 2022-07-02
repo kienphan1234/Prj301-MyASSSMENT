@@ -15,6 +15,10 @@
     </head>
     <body>
         <form action="addmark" method="POST">
+            Choose group: <input type="text" name="groupName" >
+            <input type="submit" value="Choose"><br/>
+            Choose course: <input type="text" name="courseID" >
+            <input type="submit" value="Choose">
             <table border="1px">
                 <tr>
                     <td></td>
@@ -43,9 +47,9 @@
                                        />
                                 <input name="component" value="${s.id}_${a.id}" type="hidden"
                                        />
-                            
+
                             </td> 
-                            </c:forEach>
+                        </c:forEach>
                     <tr/>  
                 </c:forEach>
             </table>

@@ -16,6 +16,12 @@ public class Assesment {
     private float weight;
     private ArrayList<Exam> exams = new ArrayList<>();
 
+    public Assesment(int i, String workshop_1, float f) {
+        this.id = i;
+        this.name = workshop_1;
+        this.weight = f;
+    }
+
     public int getId() {
         return id;
     }
@@ -47,5 +53,10 @@ public class Assesment {
     public void setExams(ArrayList<Exam> exams) {
         this.exams = exams;
     }
+
+    
+    public Assesment() {
+    }
+    
     
 }

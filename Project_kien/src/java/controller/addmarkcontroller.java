@@ -14,6 +14,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import model.Assesment;
 import model.Exam;
@@ -92,6 +93,11 @@ public class addmarkcontroller extends HttpServlet {
             e.setStudent(s);
             exams.add(e);
         }
+//        ArrayList<Exam> exams2 = new ArrayList<>();
+//        Student student = new Student(1,"Phan Trung Kien");
+//        Assesment assesment = new Assesment(3,"Workshop 1",3.0f);
+//         Exam examx = new Exam(1,student,assesment,13.0f);
+//         exams2.add(examx);
         dbExam.saveChanges(exams);
         response.sendRedirect("addmark");
     }

@@ -15,6 +15,11 @@ public class Student {
     private String name;
     private ArrayList<Exam> exams = new ArrayList<>();
 
+    public Student(int i, String phan_Trung_Kien) {
+        this.id = i;
+        this.name = phan_Trung_Kien;
+    }
+
     public int getId() {
         return id;
     }
@@ -22,6 +27,11 @@ public class Student {
     public void setId(int id) {
         this.id = id;
     }
+
+    public Student() {
+    }
+
+   
 
     public String getName() {
         return name;

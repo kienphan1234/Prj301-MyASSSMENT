@@ -28,7 +28,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <p><a href="#">FU-HL</a></p>
+                           <button  type="button" class="btn btn-info">FU-HL</button>
                         </td>
                     </tr>
                 </table>
@@ -41,22 +41,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">Summer2021</a>
+                            <button type="button" class="btn btn-outline-primary">Summer2021</button>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">Fall2021</a>
+                             <button type="button" class="btn btn-outline-primary">Fall2021</button>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#">Spring2022</a>
+                             <button type="button" class="btn btn-outline-primary">Spring2022</button>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <a href="#" class="text-success">Summer2022</a>
+                            <button type="button" class="btn btn-primary">Summer2022</button>
                         </td>
                     </tr>
                 </table>
@@ -68,28 +68,28 @@
                     </tr>
                     <tr>
                         <td>
-                            <p> <a href="attendanceview?class=PRN211">Basic Cross-Platform Application Programming With .NET(PRN211)  </a></p>
+                            <p> <a href="attendanceview?class=PRN211" class="btn btn-primary">Basic Cross-Platform Application Programming With .NET(PRN211)  </a></p>
                         </td>
                     </tr>
                     <tr>
                         <td>
                            
-                            <p> <a href="attendanceview?class=PRJ301" class="text-success">Java Web Application Development (PRJ301)   </a></p>
+                            <p> <a href="attendanceview?class=PRJ301" class="btn btn-primary">Java Web Application Development (PRJ301)   </a></p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p><a href="#">Software Testing (SWT301)</a></p>
+                            <p><a href="attendanceview?class=SWT301" class="btn btn-primary">Software Testing (SWT301)</a></p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p><a href="#">Software Requirement (SWR302) </a></p>
+                            <p><a href="attendanceview?class=SWR302" class="btn btn-primary">Software Requirement (SWR302) </a></p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p><a href="#">Ethics in IT(ITE302c)</a></p>
+                            <p><a href="attendanceview?class=ITE302c" class="btn btn-primary">Ethics in IT(ITE302c)</a></p>
                         </td>
                     </tr>
                 </table>

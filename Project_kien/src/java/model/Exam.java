@@ -5,6 +5,7 @@
 package model;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -16,6 +17,7 @@ public class Exam {
     private Assesment assesment;
     private float score;
     private Date date;
+
 
     public int getId() {
         return id;
@@ -56,5 +58,17 @@ public class Exam {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    public Exam(int id, Student student, Assesment assesment, float score) {
+        this.id = id;
+        this.student = student;
+        this.assesment = assesment;
+        this.score = score;
+        
+    }
+
+    public Exam() {
+    }
+    
     
 }

@@ -26,10 +26,10 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">introduce</a>
+                        <a class="nav-link" href="#">Introduce</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">majors</a>
+                        <a class="nav-link" href="#">Majors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login">Sign out</a>
