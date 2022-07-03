@@ -6,20 +6,28 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!<!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <link href="../css/grid_control.css" rel="stylesheet" type="text/css"/>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
+        <p style="background-color:#1cade7; font-size: 22px"><a href="home"> Home </a> | Add-grade</p>
+    <h1>Insert grade for Student</h1>
         <form action="addmark" method="POST">
             Choose group: <input type="text" name="groupName" >
             <input type="submit" value="Choose"><br/>
             Choose course: <input type="text" name="courseID" >
             <input type="submit" value="Choose">
-            <table border="1px">
+            </br>
+             <h2 style="font-size: 20px; color: rgb(255, 99, 71);"><center>STUDENT LIST</center></h2>
+            <div class="table-responsive">
+            <table class="table">
                 <tr>
                     <td></td>
                     <c:forEach items="${requestScope.assesments}" var="a">
@@ -53,8 +61,9 @@
                     <tr/>  
                 </c:forEach>
             </table>
+                </div>
             <br/>
-            <input type="submit" value="Save"/>
+            <center><input  style=" padding: 10px 20px"; class="btn btn-outline-success" type="submit" value="Save"/></center>
         </form>
     </body>
 </html>

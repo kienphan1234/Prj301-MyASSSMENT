@@ -72,6 +72,9 @@
                              <li class="nav-item">
                                 <a class="nav-link" href="addmark">Add Mark(Nhập Điểm)</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="viewmarks">view Mark(Xem Điểm)</a>
+                            </li>
                         </c:if>
                        
                     </ul>

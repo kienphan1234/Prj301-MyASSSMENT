@@ -76,6 +76,7 @@ public class ExamDBContext extends DBContext<Exam>{
             for (Exam exam : exams) {
                 //INSERT
                 if (exam.getId() == -1 && exam.getScore() != -1) {
+                
                     String sql_insert = "INSERT INTO [dbo].[Exam]\n"
                             + "           ([sid]\n"
                             + "           ,[aid]\n"
@@ -91,8 +92,9 @@ public class ExamDBContext extends DBContext<Exam>{
                     stm.setInt(2, exam.getAssesment().getId());
                     stm.setFloat(3, exam.getScore());
                     stm.executeUpdate();
-                } //UPDATE
-                else if (exam.getId() != -1 && exam.getScore() != -1) {
+                }
+                 //UPDATE
+                if (exam.getId() != -1 && exam.getScore() != -1) {
                     String sql_update = "UPDATE Exam SET Score = ? WHERE eid = ?";
                     PreparedStatement stm = connection.prepareStatement(sql_update);
                     stm.setInt(2, exam.getId());
