@@ -18,12 +18,14 @@ import model.Student;
  */
 public class StudentDBContext extends DBContext<Student>{
 
-    @Override
-    public ArrayList<Student> list() {
+    
+    public ArrayList<Student> list(String className,String group) {
         ArrayList<Student> students = new ArrayList<>();
         try {
-            String sql = "SELECT sid,sname from Student_mark";
+            String sql = "SELECT sid,sname from Student_mark where classin = ? and course = ?";
             PreparedStatement stm = connection.prepareStatement(sql);
+            stm.setString(1, className);
+            stm.setString(2, group);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
                 Student s = new Student();

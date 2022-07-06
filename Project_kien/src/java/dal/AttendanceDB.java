@@ -23,7 +23,7 @@ import org.apache.tomcat.util.net.SSLHostConfigCertificate;
  */
 public class AttendanceDB extends DBContext<User> {
 
-    @Override
+    
     public ArrayList<User> list() {
         ArrayList<User> users = new ArrayList<>();
         String sql = "select*\n"

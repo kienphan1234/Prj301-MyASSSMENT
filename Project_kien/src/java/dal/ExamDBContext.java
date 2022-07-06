@@ -20,7 +20,7 @@ import model.Student;
  */
 public class ExamDBContext extends DBContext<Exam>{
 
-    @Override
+    
     public ArrayList<Exam> list() {
         ArrayList<Exam> exams = new ArrayList<>();
         try {

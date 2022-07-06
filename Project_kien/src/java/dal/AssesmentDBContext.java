@@ -18,7 +18,7 @@ import model.Assesment;
  */
 public class AssesmentDBContext extends DBContext<Assesment>{
 
-    @Override
+  
     public ArrayList<Assesment> list() {
        ArrayList<Assesment> assesments = new ArrayList<>();
         try {

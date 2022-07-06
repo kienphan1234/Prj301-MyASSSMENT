@@ -31,7 +31,7 @@ public class TimeTableDAO extends DBContext {
         }
         return listTable;
     }    
-    @Override
+   
     public ArrayList list() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

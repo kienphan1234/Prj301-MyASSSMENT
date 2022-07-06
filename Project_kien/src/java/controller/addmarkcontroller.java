@@ -50,7 +50,9 @@ public class addmarkcontroller extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.setAttribute("students", dbStu.list());
+        String className = request.getParameter("groupName");
+        String group = request.getParameter("courseID");
+        request.setAttribute("students", dbStu.list(className,group));
         request.setAttribute("assesments", dbAss.list());
         request.setAttribute("exams", dbExam.list());
          request.getRequestDispatcher("view/addmark.jsp").forward(request, response);
