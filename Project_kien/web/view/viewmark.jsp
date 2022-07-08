@@ -36,6 +36,8 @@
                         <c:forEach items="${requestScope.assesments}" var="a">
                             <td>${a.name}</td> 
                         </c:forEach>
+                        <td style="width:10%;"><p>GRADE</p></td>
+                        <td style="width:10%;"><p>STATUS</p></td> 
                     <tr/>
                     <c:forEach items="${requestScope.students}" var="s">
                         <tr>
@@ -48,7 +50,7 @@
                                                    value="${e.score}"
                                                </c:if>
                                            </c:forEach>
-                                            disabled />
+                                           disabled />
                                     <input name="eid${s.id}_${a.id}" type="hidden"
                                            <c:forEach items="${requestScope.exams}" var="e">   
                                                <c:if test="${e.student.id eq s.id and e.assesment.id eq a.id}">
@@ -61,11 +63,14 @@
 
                                 </td> 
                             </c:forEach>
+                            <td style="width:10%;"><p></p></td>
+                            <td style="width:10%;"><p style="color:#FF0000">NOTPASSED</p></td>
+                            <td style="width:10%;"><p style="color:#33CC33">PASSED</p></td>
                         <tr/>  
                     </c:forEach>
                 </table>
             </div>
-            
+
         </form>
     </body>
 </html>
