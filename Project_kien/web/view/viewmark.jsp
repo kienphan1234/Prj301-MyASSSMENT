@@ -36,8 +36,7 @@
                         <c:forEach items="${requestScope.assesments}" var="a">
                             <td>${a.name}</td> 
                         </c:forEach>
-                        <td style="width:10%;"><p>GRADE</p></td>
-                        <td style="width:10%;"><p>STATUS</p></td> 
+                        
                     <tr/>
                     <c:forEach items="${requestScope.students}" var="s">
                         <tr>
@@ -63,9 +62,7 @@
 
                                 </td> 
                             </c:forEach>
-                            <td style="width:10%;"><p></p></td>
-                            <td style="width:10%;"><p style="color:#FF0000">NOTPASSED</p></td>
-                            <td style="width:10%;"><p style="color:#33CC33">PASSED</p></td>
+                            
                         <tr/>  
                     </c:forEach>
                 </table>
